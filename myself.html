@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人信息</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/cont.css" type="text/css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="commjs/myfuntools.js"></script>
+    <style type="text/css">
+        body {
+            font-family: 微软雅黑;
+            background: #F0F0F0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top_bar" style="height:auto">
+        <!--导航条-->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="border-radius:0;margin-bottom:0;padding:auto;margin:auto;">
+            <div class="container-fluid" style="max-width: 1150px;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"> <img alt="logo" src="images/logo.png" style="width: 30px; eight: 30px; padding: auto; margin: auto; "> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="index"><a href="index.html">主页</a></li>
+                        <li id="suibi"><a href="#">随笔</a></li>
+                        <li id="qiaduan"><a href="#">web前端</a></li>
+                        <li id="shoujk"><a href="#">手机控</a></li>
+                        <li class="dropdown" id="guany">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">关于本站</a></li>
+                                <li><a href="#">查看资料 admin</a></li>
+                                <li><a href="./server/logout.php?action=index">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="width: 100%; height: 300px; background: url(./images/grxx_bk.jpg); background-size: cover; margin-top: 0">
+            <div class="container-fluid" style="width: 1150px">
+                <div id="welcome" class="foot_font" style="padding-top: 120px; margin: 0 auto"><h1>管理员；欢迎您</h1></div>
+            </div>
+        </div>
+        <div id="grxxPanl" class="panel panel-default body" style="border-radius: 0; width: 1150px; height: 250px; padding-top: 15px; margin: auto; margin-top: -100px; ">
+            <div class="container-fluid" style="width: 1150px">
+                <div style="float:left">
+                    <a class="navbar-brand" href="#" style="padding: 0; "> <img alt="logo" src="images/head_ico/head_mr.png" style="border-radius: 0;width:150px; height: 150px; padding: 0; margin: 0"></a>
+                </div>
+                <div id="grxx" style="width: 83%; float: right;">
+                    
+                    <span style="margin-left: 12px; float: right"><a id='logOut' style='' href='./server/logout.php' title="退出登录"><img src="images/guanbi.png" style="width: 20px; margin: auto; opacity: 0.5; "></a></span>
+                    <span style="float:right"><a id="editzz" href='javascript:void(0)' title="编辑个人信息"><img src="images/edit.png" style="width: 20px; margin: auto; opacity: 0.5; "></a></span>
+                    <h3 id="yhName_right"></h3>
+                    <div style="padding: 2px"></div>
+                    <span id="adress"></span>
+                    <hr style="margin-bottom:10px" />
+                    <span id="grqm"></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default login_body body" style="border-radius: 0; width: 1150px; height: auto; padding: 0; margin: auto; margin-top: 10px; background: #F0F0F0; margin-bottom: 0; box-shadow: 0 0 0;border:0; ">
+            <div class="panel panel-default login_body body" style="border-radius: 0; width: 820px;float:left">
+                <ul class="nav nav-pills" style="border-radius: 0;">
+                    <li class="active" style="width:10%"><a href="#home" data-toggle="tab" style="text-align: center; border-radius: 0">文章</a></li>
+                    <li style="width:10%"><a href="#ios" data-toggle="tab" style="text-align: center; border-radius: 0">回复</a></li>
+                    <li style="width:10%"><a href="#jmeter" data-toggle="tab" style="text-align: center; border-radius: 0">动态</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content" style="padding-left:10px ;padding-right:10px">
+                </div>
+            </div>
+            <div class="panel panel-default login_body body" style="border-radius: 0; width: 320px; float: left;margin-left:10px"></div>
+        </div>
+        <nav id="footer" class="navbar navbar-inverse clearfloat" role="navigation" style="border-radius: 0; height: 150px; margin-top: 10px; margin-bottom: 0">
+            <div style="padding: auto; margin: auto; text-align: center; margin-top: 20px"><a class="foot_font" href="#">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="foot_font" href="#">关于本网站</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="foot_font" href="#">法律申明</a></div>
+            <div class="foot_font" style="padding: auto; margin: auto; text-align: center; margin-top: 20px">本网站仅仅作为个人使用而并非商业用途，若出现一切纠纷本网站不负任何责任</div>
+            <div class="foot_font" style="padding: auto; margin: auto; text-align: center; margin-top: 20px">版权归个人开发者@<a href="#">aimmarc</a>所有，侵权必究</div>
+        </nav>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:300px;margin-top:20%">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color:#0094ff">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">
+                            ×
+                        </button>
+                        <h4 class="modal-title foot_font" id="myModalLabel">
+                            警告！
+                        </h4>
+                    </div>
+                    <div class="modal-body" style="height:60px">
+                        该操作无法撤销，是否继续进行？
+                    </div>
+                    <div class="modal-footer" style="background-color:#F0F0F0">
+                        <button type="button" class="btn foot_font" style="border: 0; background-color: #0094ff"
+                                data-dismiss="modal">
+                            取消
+                        </button>
+                        <button id="btnQD" type="button" class="btn btn-default" style="border: 0">
+                            确定
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #ffffff">
+                        <div class="container">
+                            <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">
+                                ×
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                编辑个人信息
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="height: 600px; background-color: #ffffff; ">
+                        <div class="container">
+                            <h5 id="warning" style="color:red">* 请输入昵称！</h5>
+                            <form id="grxxFrom">
+                                <ul id="">
+                                    <li>
+                                        <span style="font-size: 16px;">昵称：</span>
+                                        <span style="width:30%">
+                                            <input class="grxx_input" name="nickname" style="width: 266px;height:30px" id="nickname" required="required" /><!--span style="color:red">*</span>-->
+                                        </span>
+                                        <span style="margin-left: 20px; font-size: 16px;">性别：</span>
+                                        <span style="width:30%">
+                                            <input type="radio" checked name="sex" style="width: 18px" id="man" value="1" /> <span style="font-size:16px">男</span>
+                                            <input type="radio" name="sex" style="width: 18px" id="woman" value="2" /> <span style="font-size:16px">女</span>
+                                        </span>
+                                    </li>
+                                    <li style="margin-top:20px">
+                                        <span style="font-size: 16px;">行业：</span>
+                                        <span style="width:30%">
+                                            <input name="trade" style="width: 266px; height: 30px; " id="trade" />
+                                        </span>
+                                        <span style="margin-left: 20px; font-size: 16px;">职位：</span>
+                                        <span style="width:30%">
+                                            <input name="position" style="width: 266px; height: 30px" id="position" />
+                                        </span>
+                                    </li>
+                                    <li style="margin-top:20px">
+                                        <span style="font-size: 16px;">地区：</span>
+                                        <span>
+                                            <select name="country" style="width: 200px; height: 30px" id="country">
+                                                <option value="1">中华人民共和国</option>
+                                                <option value="2">美国</option>
+                                                <option value="3">英国</option>
+                                                <option value="4">法国</option>
+                                                <option value="5">德国</option>
+                                                <option value="6">俄罗斯</option>
+                                                <option value="7">澳大利亚</option>
+                                                <option value="8">加拿大</option>
+                                                <option value="9">韩国</option>
+                                                <option value="10">朝鲜</option>
+                                                <option value="11">日本</option>
+                                                <option value="12">印度</option>
+                                            </select>
+                                        </span>
+                                        <span style="width:30%">
+                                            <select name="province" style="width: 200px; height: 30px" id="province"></select>
+                                        </span>
+                                        <span style="width:30%">
+                                            <select name="city" style="width: 200px; height: 30px" id="city"></select>
+                                        </span>
+                                    </li>
+                                    <li style="margin-top:20px">
+                                        <span style="font-size: 16px;width:20%">签名：</span>
+                                        <span>
+                                            <textarea style="width: 608px; height: 390px; vertical-align: top" id="signTXT"></textarea>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="background-color: #ffffff">
+                        <button type="button" class="btn btn-default " style="border: 0;"
+                                data-dismiss="modal">
+                            取消
+                        </button>
+                        <button id="btnBC" type="button" class="btn btn-primary" style="border: 0">
+                            保存
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+
+    <script type="text/javascript" src="myself.html.js?v=1"></script>
+</body>
+</html>

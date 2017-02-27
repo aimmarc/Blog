@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang='zh-cn'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>手机控-主页</title>
+
+    <script type='text/javascript' src='../../js/jquery-3.1.0.min.js'></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel='stylesheet' href='../../bootstrap/css/bootstrap.css'>
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel='stylesheet' href='../../bootstrap/css/bootstrap-theme.min.css'>
+
+    <script src='http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js'></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src='../../bootstrap/js/bootstrap.js'></script>
+    <!-- md5加密 文件 -->
+    <script type='text/javascript' src='../../js/md5.js'></script>
+    <!-- 通用方法 文件 -->
+    <script type='text/javascript' src='../../commjs/tools.js'></script>
+    <link rel='stylesheet' href='../../css/cont.css' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src='http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js'></script>
+      <script src='http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
+    <![endif]-->
+    <style type='text/css'>
+        body {
+            font-family: 微软雅黑;
+            margin-top: 50px;
+            background: #F0F0F0;
+        }
+
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        #addNew {
+            background-color: #242222;
+        }
+
+            #addNew:hover {
+                background-color: #808080;
+            }
+
+        #serchbtn {
+            background-color: #8F5523;
+        }
+
+            #serchbtn:hover {
+                background-color: #808080;
+            }
+    </style>
+</head>
+
+<body>
+    <div class='top_bar' style='height:auto'>
+        <!--导航条-->
+        <nav class='navbar navbar-inverse navbar-static-top navbar-fixed-top ' role='navigation' style='border-radius:0;margin-bottom:0;padding:auto;margin:auto'>
+            <div class='container-fluid' style='max-width: 1150px;'>
+                <div class='navbar-header'>
+                    <button type='button' class='navbar-toggle' data-toggle='collapse'
+                            data-target='#bs-example-navbar-collapse-1'>
+                        <span class='sr-only'>切换导航</span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </button>
+                    <a class='navbar-brand' href='index.html'> <img alt='logo' src='../../images/logo.png' style='width:30px;margin:auto'> </a>
+                </div>
+                <div class='navbar-collapse collapse' id='bs-example-navbar-collapse-1'>
+                    <ul class='nav navbar-nav navbar-right'>
+                        <li id='index'><a href='../../index.html'>主页</a></li>
+                        <li id='suibi'><a href='#'>随笔</a></li>
+                        <li id='qiaduan'><a href='#'>web前端</a></li>
+                        <li id='php'><a href='#'>php</a></li>
+                        <li id='shoujk'><a href='mobile.html'>手机控</a></li>
+                        <li class='dropdown' id='guany'>
+                            <a id='logedName' href='javascript:;' class='dropdown-toggle'><img id='usericon' src='../../images/user.png' style='width:13px;padding:auto;margin:auto;margin-bottom:2px'> </a>
+                            <ul id='navself' class='dropdown-menu' role='menu' style='min-width:100%'>
+                                <li>
+                                    <a id='grzy' href='#'>个人主页</a>
+                                </li>
+                            </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class='panel panel-default' style='border:0;border-radius:0;width:1150px;padding-left:15px;padding-top:10px;padding-bottom:20px;padding-right:10px;margin:auto;background:#F0F0F0;margin-bottom:-30px;box-shadow:0 0 0;width:1150px'>
+            <div class='row'>
+                <div class='panel panel-default  ' style='border:0;width:100%;height:130px;border-radius:0;margin-bottom:0;float:left;padding:10px'>
+                    <div id='mainPanel' style='padding:0px'>
+                        <div>
+                            <a class='navbar-brand' href='mobile.html' style='float:left;padding:0'> <img id='phoneImg' title='手机控' src='../../images/phone.png' style='width: 40px;  margin: auto; margin-top:5px '> </a>
+                            <a href='mobile.html' class='logo_font' style='float:left;padding:0;margin-top:-16px'><h1>手机控</h1></a>
+                            <div class='input-group' style='width:300px;float:right;margin-top:10px;margin-right:5px;'>
+                                <input id='searchbox' type='text' class='form-control' style='border-radius: 0;'>
+                                <span class='input-group-btn'>
+                                    <button id='serchbtn' class='btn' type='button' style='border-radius: 0;color:#ffffff'>搜索</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class='nav nav-pills' style='border-radius: 0;margin-left:5px;clear:both;padding-top:10px'>
+                            <li class='active' style='width:18%'><a href='mobile.html' data-toggle='tab' style='text-align: center; border-radius: 0'>手机控首页</a></li>
+                            <li style='width: 18%'><a href='android.html' data-toggle='tab' style='text-align: center; border-radius: 0'>安卓专区</a></li>
+                            <li style='width: 18%'><a href='#jmeter' data-toggle='tab' style='text-align: center; border-radius: 0'>iPhone专区</a></li>
+                            <li style='width: 18%'><a href='#jmeter' data-toggle='tab' style='text-align: center; border-radius: 0'>Win10专区</a></li>
+                            <li style='width:18%'><a href='#jmeter' data-toggle='tab' style='text-align: center; border-radius: 0'>移动论坛</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id='sonPanel-left' class='panel panel-default panel_son  panel_son1' style='border: 0; width: 863px; height: auto; padding: 15px; border-radius: 0; float: left; margin-top: 10px'>
+                    <div class='panel panel-default panel_son  panel_son1' style='width: 330px; float: left;padding-top: 0;padding-right:0; border: 0; <!--box-shadow: 0 0 0-->'>
+                        <div id='lunbotu'>
+                            <div style='width:330px;height:450px;margin-bottom:0;margin:auto'>
+                                <div id='myCarousel' class='carousel slide' style='width:100%;height:100%'>
+                                    <ol class='carousel-indicators'>
+                                        <li data-target='#myCarousel' data-slide-to='0' class='active'></li>
+                                        <li data-target='#myCarousel' data-slide-to='1'></li>
+                                        <li data-target='#myCarousel' data-slide-to='2'></li>
+                                    </ol>
+                                    <div class='carousel-inner' style='width:100%;height:100%'>
+                                        <div class='item active' style='background-size:cover'> <img src='../../images/1.jpg' alt='First slide' style='width:100%;height:auto'> </div>
+                                        <div class='item' style='background-size:cover'> <img src='../../images/2.jpg' alt='Second slide' style='width:100%;height:auto'> </div>
+                                        <div class='item' style='background-size:cover'> <img src='../../images/3.jpg' alt='Third slide' style='width:100%;height:auto'> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class='pill' style='border-radius: 0;margin-left:0px;padding-top:0px;float:left;margin-top:15px'>
+                            <li class='active' style='color: #ffffff'>软件推荐</li>
+                        </ul>
+                        <div class='list-group' style='clear: both;box-shadow:0 0 0 0;clear:both'>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><img src='../../images/download.png' style='width:25px;float:right' > Dapibus ac facilisis in</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><img src='../../images/download.png' style='width:25px;float:right'>Morbi leo risus</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><img src='../../images/download.png' style='width:25px;float:right'>Porta ac consectetur ac</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><img src='../../images/download.png' style='width:25px;float:right'>Vestibulum at eros</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><img src='../../images/download.png' style='width:25px;float:right'>Dapibus ac facilisis in</a>
+                        </div>
+                    </div>
+                    <div id='sonsonPanel-main' class='panel panel-default panel_son  panel_son1' style='width: 500px; float: right; padding: 15px; padding-top: 0;padding-right:0; border: 0; box-shadow: 0 0 0'>
+                        <div style='float:left;margin-left:0'>
+                            <ul class='pill' style='border-radius: 0;margin-left:0px;clear:both;padding-top:0px;float:left'>
+                                <li class='active' style='color: #ffffff'>手机控最新</li>
+                            </ul>
+                            <a class='navbar-brand' href='mobile.html' style='float:left;padding:0' title='刷新'> <img src='../../images/Refresh.png' style='opacity: 0.5; width: 20px; margin-left: 10px; margin-top: 5px;'> </a>
+                            <a class='logo_font' style='float:left;margin-left:298px;padding-top:5px'>查看更多</a>
+                        </div>
+                        <div id='mainList' class='list-group' style='clear: both;box-shadow:0 0 0 0;'>
+                            <!--<a href='#' class='list-group-item list_ligte' style=' border: 0; color: #8F5523'><img src='../../images/top.png' class='headico'><span class='rightspan'>19日</span>Dapibus ac facilisis in</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0; color: #8F5523'><img src='../../images/top.png' class='headico'><span class='rightspan'>16日</span>Morbi leo risus</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0; color: #8F5523'><img src='../../images/top.png' class='headico'><span class='rightspan'>14日</span>Porta ac consectetur ac</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0; color: #8F5523'><img src='../../images/top.png' class='headico'><span class='rightspan'>14日</span>Vestibulum at eros</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0; color: #8F5523'><img src='../../images/top.png' class='headico'><span class='rightspan'>13日</span>Dapibus ac facilisis in</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan' style=' color: #8F5523; '>今日</span>Morbi leo risus</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan' style=' color: #8F5523; '>今日</span>Porta ac consectetur ac</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan' style=' color: #8F5523; '>今日</span>Vestibulum at eros</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan' style=' color: #8F5523; '>今日</span>Dapibus ac facilisis in</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan' style=' color: #8F5523; '>今日</span>Morbi leo risus</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan' style=' color: #8F5523; '>今日</span>Porta ac consectetur ac</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan'>20日</span>Vestibulum at eros</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan'>20日</span>Dapibus ac facilisis in</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan'>19日</span>Morbi leo risus</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan'>20日</span>Porta ac consectetur ac</a>
+                            <a href='#' class='list-group-item list_ligte' style='border: 0'><span class='rightspan'>19日</span>Vestibulum at eros</a>-->
+                        </div>
+                    </div>
+
+                </div>
+                <div id='sonPanel' class='panel panel-default panel_son' style='border:0;width:282px;height:auto;padding:15px;padding-top:5px;border-radius:0;float:left;margin-left:10px;margin-top:10px'>
+                    <li class='list-group-item' style='border:0;padding-left:0;padding-top:0'>
+                        <h4 class='mainfontcolor'><img src='../../images/hot.png' style='opacity: 0.8; width: 25px; margin-right: 5px; margin-top: -2px;'>热门文章TOP10</h4>
+                    </li>
+                    <ul id="listRight" class='list-group' style='border:0;box-shadow:0 0 0 0;margin-top:0;margin:0'>
+                        <!--<li class='list-group-item list_ligte'><a class='list_font'>免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>
+                        <li class='list-group-item list_ligte' style='border: 0'><a class='list_font'>免费域名注册免费域名注册</a></li>-->
+                    </ul>
+                    <!--<div id='btnMenu1' class='btn-group' style='margin-top:10px'>
+                        <button id='addNew' type='button' class='btn' style='width:253px;margin-bottom:0px;border:0;'>
+                            <h4 style='color:#F0F0F0'>投稿</h4>
+                        </button>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class=' floatbutton' style='width:100px;height:50px;float:right' title='回到顶部'><a id='backTop' class='navbar-brand' href='#' style='padding:0'> <img id='bktopIMG' alt='logo' src='../../images/bktop.png' style='width:64px;height:64px;padding:0;margin:0'></a></div>
+        <nav class='navbar navbar-inverse' role='navigation' style='border-radius:0;height:150px;margin-top:0;margin-bottom:0'>
+            <div style='padding:auto;margin:auto;text-align:center;margin-top:20px'><a class='foot_font' href='#'>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class='foot_font' href='#'>关于本网站</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class='foot_font' href='#'>法律申明</a></div>
+            <div class='foot_font' style='padding:auto;margin:auto;text-align:center;margin-top:20px'>本网站仅仅作为个人使用而并非商业用途，若出现一切纠纷本网站不负任何责任</div>
+            <div class='foot_font' style='padding:auto;margin:auto;text-align:center;margin-top:20px'>版权归个人开发者@<a href='#'>aimmarc</a>所有，侵权必究</div>
+        </nav>
+    </div>
+    <script type='text/javascript' src='mobile.html.js?v=1'></script>
+</body>
+</html>

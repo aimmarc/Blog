@@ -1,0 +1,227 @@
+
+@-ms-viewport {
+    width: device-width;
+}
+
+.container {
+    width: 100%;
+}
+
+.top_bar {
+    min-width: 1150px;
+    max-width: 100%;
+    height: auto;
+    /* 保证页面能撑开浏览器高度时显示正常*/
+    min-height: 100%;
+}
+
+.nav_top {
+    max-width: 1150px;
+}
+
+.list_body {
+    min-height: 100%;
+}
+
+.content {
+    padding-bottom: 0;
+}
+
+.footer {
+    min-width: 1150px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* 关键 */
+    left: 0;
+    /* IE下一定要记得 */
+    height: 150px;
+    /* footer的高度一定要是固定值*/
+}
+
+.wapper {
+    position: relative;
+    /*重要！保证footer是相对于wapper位置绝对*/
+    height: auto;
+    /* 保证页面能撑开浏览器高度时显示正常*/
+    min-height: 100%; /* IE6不支持，IE6要单独配置*/
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.panel_son {
+    min-height: 330px;
+}
+
+.panel_son1 {
+    min-height: 1000px;
+}
+
+.foot_font {
+    color: azure;
+}
+
+.panel_son_edit {
+    min-height: 135px;
+}
+
+.login_body {
+    min-height: 800px;
+}
+
+.hr {
+    width: 100%;
+    height: 0px;
+    color: #000000;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+.body {
+    transform: scale(1.0);
+}
+
+.login_button {
+    width: 100%;
+    height: 50px;
+    background: #56abe4;
+    border-radius: 8px;
+    text-align: center;
+    padding: 4px;
+}
+
+.toolbar_button {
+    width: 60px;
+    height: 100%;
+    background: azure;
+    border-radius: 0px;
+    text-align: center;
+    padding: 0;
+}
+
+.login_input {
+    border-radius: 4px;
+}
+
+body {
+    font-family: 微软雅黑;
+    background: url("./../img/bg.jpg") fixed center center no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+#sign:hover {
+    background: #2B71D9;
+}
+
+/*验证码*/
+.yzm {
+    width: 80px;
+    height: 30px;
+    float: right;
+    border-radius: 4px 4px 4px 4px;
+    border: 0.5px;
+}
+
+.floatbutton {
+    position: fixed;
+    right: 0;
+    bottom: 250px;
+}
+
+.dropdownbar {
+    position: fixed;
+}
+
+.hr {
+    margin: 2px;
+}
+
+
+a:hover {
+    text-decoration: none; /*指鼠标在链接*/
+    color:#cc6600
+}
+
+.logo_font {
+    color:#8F5523
+}
+
+.list_font {
+    color: #333333;
+}
+
+.list_son_font {
+    color: #a9a9a9;
+}
+
+.warning {
+    color: red;
+}
+
+li {
+    list-style-type: none;
+}
+
+.grxx_font {
+    font-size: 20px;
+}
+
+.grxx_input {
+    width:220px;
+    height:25px
+}
+
+.list_ligte {
+    padding-left:0;
+    padding-right:0;
+    border: 0px;
+}
+
+.date {
+    float:right;
+    font-size:12px;
+    color:#a9a9a9
+}
+
+.pill {
+    padding:0;
+    width:100px;
+    height:30px;
+    background:#8F5523;
+    text-align: center;
+    line-height:30px
+}
+
+.headico {
+    width:18px;
+    margin-right:4px
+}
+
+.rightspan {
+    float:right
+}
+
+.mainfontcolor {
+    color:#8F5523
+}
+
+.fonts1 {
+    font-size:16px;
+    line-height: 30px;
+    text-align:justify; 
+    text-justify:inter-ideograph;
+    overflow:hidden;
+}
+
+.listhover:hover {
+    box-shadow: 1px 1px 1px #a9a9a9;
+    background-color:#fcfcfc
+}

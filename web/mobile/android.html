@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang='zh-cn'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>手机控-安卓</title>
+
+    <script type='text/javascript' src='../../js/jquery-3.1.0.min.js'></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel='stylesheet' href='../../bootstrap/css/bootstrap.css'>
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel='stylesheet' href='../../bootstrap/css/bootstrap-theme.min.css'>
+
+    <script src='http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js'></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src='../../bootstrap/js/bootstrap.js'></script>
+    <!-- md5加密 文件 -->
+    <script type='text/javascript' src='../../js/md5.js'></script>
+    <!-- 通用方法 文件 -->
+    <script type='text/javascript' src='../../commjs/tools.js'></script>
+    <link rel='stylesheet' href='../../css/cont.css' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src='http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js'></script>
+      <script src='http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
+    <![endif]-->
+    <style type='text/css'>
+        body {
+            font-family: 微软雅黑;
+            margin-top: 50px;
+            background: #F0F0F0;
+        }
+
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        #addNew {
+            background-color: #242222;
+        }
+
+            #addNew:hover {
+                background-color: #808080;
+            }
+
+        #serchbtn {
+            background-color: #8F5523;
+        }
+
+            #serchbtn:hover {
+                background-color: #808080;
+            }
+    </style>
+</head>
+
+<body>
+    <div class='top_bar' style='height:auto'>
+        <!--导航条-->
+        <nav class='navbar navbar-inverse navbar-static-top navbar-fixed-top ' role='navigation' style='border-radius:0;margin-bottom:0;padding:auto;margin:auto'>
+            <div class='container-fluid' style='max-width: 1150px;'>
+                <div class='navbar-header'>
+                    <button type='button' class='navbar-toggle' data-toggle='collapse'
+                            data-target='#bs-example-navbar-collapse-1'>
+                        <span class='sr-only'>切换导航</span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </button>
+                    <a class='navbar-brand' href='index.html'> <img alt='logo' src='../../images/logo.png' style='width:30px;margin:auto'> </a>
+                </div>
+                <div class='navbar-collapse collapse' id='bs-example-navbar-collapse-1'>
+                    <ul class='nav navbar-nav navbar-right'>
+                        <li id='index'><a href='../../index.html'>主页</a></li>
+                        <li id='suibi'><a href='#'>随笔</a></li>
+                        <li id='qiaduan'><a href='#'>web前端</a></li>
+                        <li id='php'><a href='#'>php</a></li>
+                        <li id='shoujk'><a href='mobile.html'>手机控</a></li>
+                        <li class='dropdown' id='guany'>
+                            <a id='logedName' href='javascript:;' class='dropdown-toggle'><img id='usericon' src='../../images/user.png' style='width:13px;padding:auto;margin:auto;margin-bottom:2px'> </a>
+                            <ul id='navself' class='dropdown-menu' role='menu' style='min-width:100%'>
+                                <li>
+                                    <a id='grzy' href='#'>个人主页</a>
+                                </li>
+                            </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class='panel panel-default' style='border:0;border-radius:0;width:1150px;padding-left:15px;padding-top:20px;padding-bottom:20px;padding-right:10px;margin:auto;background:#F0F0F0;margin-bottom:-30px;box-shadow:0 0 0;width:1150px'>
+            <div class='row'>
+                <div class='panel panel-default  ' style='border:0;width:100%;height:130px;border-radius:0;margin-bottom:0;float:left;padding:10px'>
+                    <div id='mainPanel' style='padding:0px'>
+                        <div>
+                            <a class='navbar-brand' href='mobile.html' style='float:left;padding:0'> <img id='phoneImg' title='手机控' src='../../images/phone.png' style='width: 40px;  margin: auto; margin-top:5px '> </a>
+                            <a href='mobile.html' class='logo_font' style='float:left;padding:0;margin-top:-16px'><h1>手机控</h1></a>
+                            <div class='input-group' style='width:300px;float:right;margin-top:10px;margin-right:5px;'>
+                                <input id='searchbox' type='text' class='form-control' style='border-radius: 0;'>
+                                <span class='input-group-btn'>
+                                    <button id='serchbtn' class='btn' type='button' style='border-radius: 0;color:#ffffff'>搜索</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class='nav nav-pills' style='border-radius: 0;margin-left:5px;clear:both;padding-top:10px'>
+                            <li style='width:18%'><a href='mobile.html' data-toggle='tab' style='text-align: center; border-radius: 0'>手机控首页</a></li>
+                            <li class='active' style='width: 18%'><a href='android.html' data-toggle='tab' style='text-align: center; border-radius: 0'>安卓专区</a></li>
+                            <li style='width: 18%'><a href='#jmeter' data-toggle='tab' style='text-align: center; border-radius: 0'>iPhone专区</a></li>
+                            <li style='width: 18%'><a href='#jmeter' data-toggle='tab' style='text-align: center; border-radius: 0'>Win10专区</a></li>
+                            <li style='width:18%'><a href='#jmeter' data-toggle='tab' style='text-align: center; border-radius: 0'>移动论坛</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="mainList" class='panel panel-default panel_son panel_son1' style='border: 0; width: 800px; height: auto; padding: 0; border-radius: 0; float: left; margin-top: 20px; background: #F0F0F0; box-shadow: 0 0 0; '>
+                    <!--<div class='panel panel-default listhover' style='border: 0; width: 100%; float: left; padding: 0 15px 15px; border-radius: 0; margin: 0 0 10px'>
+                        <h3 class="logo_font">辽宁舰今天出海训练辽宁舰今天出海训练辽宁舰今天出海训练</h3>
+                        <div style="float:left;width:20%">
+                            <img src='../../images/SignUp.png' style='width: 150px; margin: 0; height: 90px; float: left; border-radius: 2px;'>
+                        </div>
+                        <div style="float:left;width:80%;height:100px">
+                            <p class="fonts1" style="float: left; height: 90px">
+                                这样开车是 reckless driving。就算不开车，拔牌子也是违法的。具体的 yard sign
+                                各州是有法律来规定和保护的（Election Sign Rules） 不过，在竞选中偷拔对手的标牌实在是太常见了。事实
+                                上，竞选团队对这种自己的 yard sign 被对手偷走的事简直是不能再欢迎了。因为...
+                            </p>
+                        </div>
+                        <span style="float: left;font-size:14px"><img src='../../images/time.png' style='width: 20px; margin: 0; height: 20px; border-radius: 2px;margin-left:0'> (1分钟以前)</span>
+                        <span style="float: left;font-size:14px"><img src='../../images/read.png' style='width: 20px; margin: 0; height: 20px; float: left; border-radius: 2px; margin-left: 50px; '> 阅读(25)</span>
+                        <span style="float: left;font-size:14px"><img src='../../images/comment.png' style='width: 18px; margin: 0; height: 18px; float: left; border-radius: 2px; margin-left: 50px; '> 评论(12)</span>
+                    </div>-->
+                </div>
+                <div id='listRight' class='panel panel-default panel_son' style='box-shadow: 0 0 0; background: #ffffff; border: 0; width: 335px; height: auto; padding: 10px 15px 10px; border-radius: 0; float: left; margin-left: 20px; margin-top: 20px'>
+                </div>
+                <div style="width:70%">
+                    <ul id="yeMa" class="pagination" style="border-radius:0">
+                        <li id="houtui"><a href="javascript:void(0);">&larr; 上一页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class=' floatbutton' style='width:100px;height:50px;float:right' title='回到顶部'><a id='backTop' class='navbar-brand' href='#' style='padding:0'> <img id='bktopIMG' alt='logo' src='../../images/bktop.png' style='width:64px;height:64px;padding:0;margin:0'></a></div>
+        <nav class='navbar navbar-inverse' role='navigation' style='border-radius:0;height:150px;margin-top:0;margin-bottom:0'>
+            <div style='padding:auto;margin:auto;text-align:center;margin-top:20px'><a class='foot_font' href='#'>联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class='foot_font' href='#'>关于本网站</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class='foot_font' href='#'>法律申明</a></div>
+            <div class='foot_font' style='padding:auto;margin:auto;text-align:center;margin-top:20px'>本网站仅仅作为个人使用而并非商业用途，若出现一切纠纷本网站不负任何责任</div>
+            <div class='foot_font' style='padding:auto;margin:auto;text-align:center;margin-top:20px'>版权归个人开发者@<a href='#'>aimmarc</a>所有，侵权必究</div>
+        </nav>
+    </div>
+    <script type='text/javascript' src='android.html.js?v=1'></script>
+</body>
+</html>
+
