@@ -154,6 +154,10 @@ a:hover {
     color:#8F5523
 }
 
+.logo_font_bbs{
+    color: #228Fe6;
+}
+
 .list_font {
     color: #333333;
 }
@@ -224,4 +228,8 @@ li {
 .listhover:hover {
     box-shadow: 1px 1px 1px #a9a9a9;
     background-color:#fcfcfc
+}
+
+.active-topbar{
+    color: red;
 }
